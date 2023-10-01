@@ -5,7 +5,6 @@
     --secundario: #0097a7;
     --gris: #757575;
 }
-
 html{
     font-size: 62.5%;
 }
@@ -23,18 +22,22 @@ body{
 }
 
 .contenedor{
-    width: 120rem;
+    max-width: 120rem;
     margin: 0 auto;
 }
 .nav-bg{
-    background-color: var(--secundario);
-   
+    background-color: var(--secundario); 
 }
-
-.navegacion-principal{
-    
+.navegacion-principal{   
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+}
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 .navegacion-principal a{
     color: var(--blanco);
@@ -47,6 +50,3 @@ body{
     background-color: var(--primario);
     color: var(--oscuro);
 }
-
-
-
